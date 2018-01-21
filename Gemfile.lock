@@ -1,0 +1,33 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ethon (0.11.0)
+      ffi (>= 1.3.0)
+    ffi (1.9.18)
+    mustermann (1.0.1)
+    puma (3.11.2)
+    rack (2.0.3)
+    rack-flash3 (1.0.5)
+      rack
+    rack-protection (2.0.0)
+      rack
+    sinatra (2.0.0)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.0)
+      tilt (~> 2.0)
+    tilt (2.0.8)
+    typhoeus (1.3.0)
+      ethon (>= 0.9.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  puma
+  rack-flash3
+  sinatra
+  typhoeus
+
+BUNDLED WITH
+   1.16.0

@@ -1,0 +1,31 @@
+<div class="row text-center">
+  <div class="col-md-8 offset-md-2">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">Random Word Displayer</h3>
+        <p class="card-text" id="description">
+          Press a button and have the Word Service get you a word from the dictionary. If it succeeds, the word will be displayed below. If it fails, you should see the reason in a flash above and the service's status below.
+        </p>
+        <div id="main">
+          <a href="/home?get_word=true&authenticated=true" class="btn btn-primary">
+            Fire Authenticated Request
+          </a>
+          <a href="/home?get_word=true&authenticated=false" class="btn btn-danger">
+            Fire Unauthenticated Request
+          </a>
+          <% if word || error %>
+            <div class="card mt-4">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <%= word ? "Word" : error ? "Error" : "" %>
+                  <a class="close pull-right" href="/home">&times;</a>
+                </h5>
+                <p><%= word || error %></p>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
